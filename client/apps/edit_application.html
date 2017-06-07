@@ -1,0 +1,54 @@
+<template name="EditApplication">
+  <div class="row left-align">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input type="text" class="validate" value="{{ name }}" name="app_name" >
+          <label class="active">App Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input type="text" class="validate app-title" value="{{ title }}" name="app_title">
+          <label class="active">App Title</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input type="text" class="validate" value="{{ img }}" name="app_img">
+          <label class="active">App Image</label>
+        </div>
+        <div class="input-field col s6">
+          <input type="text" class="validate" value="{{ link }}" name="app_link">
+          <label class="active">App Link</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea class="materialize-textarea" name="app_description">{{ description }}</textarea>
+          <label class="active">App Description</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6 range-field">
+          <input type="range" class="validate" value="{{ order }}" min="1" max="20" name="app_order">
+          <label class="active">App Order</label>
+        </div>
+        <div class="input-field col s6">
+          <div class="switch">
+            <label>
+              Off
+              <input type="checkbox" {{ isEnabled }} name="app_enabled" />
+              <span class="lever"></span>
+              On
+            </label>
+          </div>
+          <label class="active">Enabled</label>
+        </div>
+      </div>
+      <div class="row right-align">
+        <button type="submit" class="waves-effect waves-light red btn submit">
+            <i class="fa fa-send right"></i>Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</template>
