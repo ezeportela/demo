@@ -1,0 +1,25 @@
+<template name="Applications">
+  <div class="container center-align" >
+    <div class="row">
+      {{# each applications }}
+        {{> Application }}
+      {{/each}}
+    </div>
+  </div>
+</template>
+
+<template name="Application">
+  <a href="{{ link }}" target="_blank">
+    <div class="col s12 m4">
+      <div class="card small">
+        <div class="card-image">
+          <img src="{{ img }}">
+          <span class="card-title">{{ title }}</span>
+        </div>
+        <div class="card-content">
+          <p>{{ description }}.</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</Template>
