@@ -1,10 +1,16 @@
 <template name="Applications">
   <div class="container center-align" >
     <div class="row">
-      {{# each applications }}
-        {{> Application }}
-
-      {{/each}}
+      {{# if applicationsAmount }}
+        {{# each applications }}
+          {{> Application }}
+        {{/each}}
+      {{ else }}
+        <h4 class="center-align">
+          <sub><i class="material-icons info-icon">info</i></sub>
+          ¡No hay aplicaciones para mostrar!
+        </h4>
+      {{/ if }}
 
       {{# if isAdmin }}
         {{> ApplicationTabs }}
