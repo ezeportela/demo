@@ -1,7 +1,5 @@
 Template.ApplicationTabs.onRendered(function() {
-  Meteor.defer(function () {
-    $('.tabs').tabs()
-  });
+  $('.tabs').tabs()
 })
 
 Template.ApplicationTabs.helpers({
