@@ -15,6 +15,7 @@ Template.EditApplication.events({
       link: $(e.target).find('[name=app_link]').val(),
       description: $(e.target).find('[name=app_description]').val(),
       order: parseInt($(e.target).find('[name=app_order]').val()),
+      github: $(e.target).find('[name=app_github]').val(),
       enabled: $(e.target).find('[name=app_enabled]').is(':checked') ? 1 : 0,
     }
 

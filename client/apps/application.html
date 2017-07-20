@@ -6,7 +6,14 @@
           <img class="responsive-img" src="{{ img }}">
         </div>
         <div class="card-content">
-          <span class="card-title">{{ title }}</span>
+          <span class="card-title">
+            {{ title }}
+            {{# if github }}
+              <a href="{{ github }}" target="_blank">
+                <img valign="middle" src="https://image.flaticon.com/icons/png/512/23/23957.png" class="github" />
+              </a>
+            {{/ if}}
+          </span>
           <!--<p>{{ description }}.</p>-->
         </div>
       </div>
